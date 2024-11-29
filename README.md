@@ -31,7 +31,7 @@
  - docker rmi "id de la imagen"
 
  *descargar una imagen:*
- - docker pull <imagen>:<tag>
+ - docker pull <imagen>:<tag>  
 
  *Para construir un imagen:* 
  
