@@ -121,21 +121,24 @@
 
 - ng serve
 
-# Java 🎰
+# Java: 🎰
 
 *Listar versiones de JDK (LTS)*
+
 - sdk list java
 
 *Instalar una versión de JDK según la lista anterior, por ejemplo:*
+
 - sdk install java 17.0.11-jbr
 
 *Para activar el microservicio de java*
+
 - mvn spring-boot:run
   
 *Para crear un jar de java ejecutable*
 - mvn clean package -DskipTests 
 
-# Swagger 🌀
+# Swagger: 🌀
 *Para localhost:*
 
 - http://localhost:8085/swagger-ui.html (Swagger  Local)
@@ -145,3 +148,58 @@
 - https://redesigned-space-broccoli-qjrvxv9996v2rj7-8085.app.github.dev/webjars/swagger-ui/index.html#/
   
 usarlo desde el path {URL_BRINDADA}/webjars/swagger-ui/index.html#/
+
+# Kubernetes: 🧿⚙️
+
+consultar versión de minikube
+  
+-  minikube version
+
+iniciar clúster kubernetes
+  
+- minikube start
+
+listar namespace
+  
+- kubectl get namespace
+- kubectl get ns
+
+crear un namespace "juan" por comando
+  
+- kubectl create namespace juan
+
+crear un namespace "juan" por comando y un "namespace.yml"
+  
+- kubectl apply -f namespace.yml
+
+consultar namespace en uso por "default"
+  
+- kubectl config view --minify | grep namespace
+
+cambiar un namespace en uso por "default" a "juan"
+  
+- kubectl config set-context --current --namespace=juan
+
+consultar todos los recursos de un namespace "juan"
+  
+- kubectl get all -n juan
+
+consultar todos los recursos y secret de un namespace "juan"
+  
+- kubectl get all,secrets -n juan
+
+listar services del namespace "juan"
+  
+- minikube service content-moderator-be -n juan
+- minikube service list
+
+probar el microservicio dentro del clúster con curl
+  
+- curl http://192.168.49.2:30001/ms_content_moderator
+- curl http://192.168.49.2:30001/ms_content_moderator/id/1
+
+crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes
+- kubectl port-forward service/content-moderator-be 8085:30001
+
+ver los logs del pod (logs del proyecto)
+- kubectl logs nombre-pod
