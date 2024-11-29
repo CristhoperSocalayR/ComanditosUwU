@@ -8,3 +8,30 @@
 *Para pausarlo :*
 
 - kill -9 "PID" (PID es el ID que se mostrara del puerto en uso)
+
+# Docker 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Angular
+
+
+
+
+
+
+
+
+
+#Java
