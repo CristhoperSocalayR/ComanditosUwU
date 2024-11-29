@@ -113,5 +113,14 @@
 
 - ng serve
 
+# Java 🎰
 
-# Java 
+*Listar versiones de JDK (LTS)*
+- sdk list java
+
+*Instalar una versión de JDK según la lista anterior, por ejemplo:*
+- sdk install java 17.0.11-jbr
+
+*Para activar el microservicio de java*
+- mvn spring-boot:run
+
