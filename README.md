@@ -1,14 +1,22 @@
 # ComanditosUwU
 
 # PUERTOS: 🔮
- *En esta ocasion 8085 estara en uso:*
+*En esta ocasion 8085 estara en uso:*
  
- - sudo lsof -i :8085
-   
+- sudo lsof -i :8085
+ 
 *Para pausarlo :*
 
 - kill -9 "PID" (PID es el ID que se mostrara del puerto en uso)
 
+*Base 64*
+
+- #echo -n "demo123" | base64
+  
+*Decodificador de 64*
+
+- #echo "OVJyaVZ5UDdjV1pH" | base64 --decode
+  
 # Docker: 🐳
  *Para saber los contenedores pausados:*
  
@@ -123,4 +131,17 @@
 
 *Para activar el microservicio de java*
 - mvn spring-boot:run
+  
+*Para crear un jar de java ejecutable*
+- mvn clean package -DskipTests 
 
+# Swagger 🌀
+*Para localhost:*
+
+- http://localhost:8085/swagger-ui.html (Swagger  Local)
+  
+*Para url de codespace o WebIDE's*
+
+- https://redesigned-space-broccoli-qjrvxv9996v2rj7-8085.app.github.dev/webjars/swagger-ui/index.html#/
+  
+usarlo desde el path {URL_BRINDADA}/webjars/swagger-ui/index.html#/
