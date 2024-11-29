@@ -31,7 +31,7 @@
  - docker rmi "id de la imagen"
 
  *descargar una imagen:*
- - docker pull <imagen>:<tag>  
+ - docker pull imagen:tag  
 
  *Para construir un imagen:* 
  
@@ -79,15 +79,39 @@
 *Eliminar contenedores, redes, volúmenes y imágenes que no estén en uso:*
 - docker-compose down --rmi all --volumes
 
+# Angular 🚀
+*Listar versiones de Node.js con la versión Angular (LTS)*
 
-# Angular
+- npm show @angular/cli dist-tags
+  
+*Instalar una versión de Node.js según la lista anterior, por ejemplo:*
+
+- nvm install 17
+  
+*Instalar una versión de Angular compatible con Node.js según la lista anterior, por ejemplo:*
+
+- npm install -g @angular/cli@17.3.8
+  
+*Verificar las versiones instaladas de Node.js y Angular*
+
+- ng version
+  
+*Instalar las dependencias de tu archivo package.json y crear la carpeta node_modules*
+
+- npm start
+  
+*Para crear un nuevo proyecto standalone (app.module.ts) o sin standalone (sin app.module.ts)*
+
+- ng new "nombre del proyecto" --standalone false
+- ng new "nombre del proyecto"
+  
+*Para crear un service:*
+
+- ng generate service "<nombre-del-servicio>"
+  
+*Para encender el servidor:*
+
+- ng serve
 
 
-
-
-
-
-
-
-
-# Java
+# Java 
