@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-cristhoper-socalay-service # Nombre del servicio para el frontend
+  namespace: cristhoper-socalay           # Namespace donde se despliega el servicio
+spec:
+  type: NodePort                  # Cambiar a LoadBalancer si estás en un entorno de nube
+  ports:
+    - port: 4200                   # Puerto expuesto por el servicio
+      targetPort: 4200             # Puerto donde escucha la aplicación dentro del contenedor
+      nodePort: 30002              # Puerto accesible desde el nodo
+  selector:
+    app: frontend-cristhoper-socalay           # Coincide con la etiqueta del Deployment para el frontend

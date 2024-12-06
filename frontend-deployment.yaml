@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-cristhoper-socalay-deployment
+  namespace: cristhoper-socalay
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend-cristhoper-socalay
+  template:
+    metadata:
+      labels:
+        app: frontend-cristhoper-socalay
+    spec:
+      containers:
+        - name: prs-backend
+          image: cris2003/prsfront
+          ports:
+            - containerPort: 4200
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
